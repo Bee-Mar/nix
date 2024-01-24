@@ -1,17 +1,22 @@
-{ config, pkgs, ... }@args:
+{ pkgs, ... }@args:
 
 {
 	environment.systemPackages = with pkgs; [
-		config.boot.kernelPackages.virtualboxGuestAdditions
+		#config.boot.kernelPackages.virtualboxGuestAdditions
+		vim
 	];
-
-	users.users.bpm = {
+	
+	users.users.bmarlowe = {
 		extraGroups = [ "docker" ];
 	};
 	
 	virtualisation = {
-		virtualbox.guest.enable = true;
-		virtualbox.guest.x11 = true;
+		# for virtualbox
+		#virtualbox.guest.enable = true;
+		#virtualbox.guest.x11 = true;
+
+		# for vmware
+		vmware.guest.enable = true;
 		docker.enable = true;
 		podman.enable = true;
 	}; 
