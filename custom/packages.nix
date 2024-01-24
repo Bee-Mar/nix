@@ -7,6 +7,10 @@
 			neovim
 			xsel
 			jq
+			tree
+			htop
+			silver-searcher
+			
 		];
 	};
 }
