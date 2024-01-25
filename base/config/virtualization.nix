@@ -1,10 +1,9 @@
 { pkgs, ... }@args:
 
 {
-	environment.systemPackages = with pkgs; [
+	#environment.systemPackages = with pkgs; [
 		#config.boot.kernelPackages.virtualboxGuestAdditions
-		vim
-	];
+	#];
 	
 	users.users.bmarlowe = {
 		extraGroups = [ "docker" ];

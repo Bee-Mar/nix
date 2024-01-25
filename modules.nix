@@ -1,8 +1,9 @@
+{lib, ...}@args:
 {
-	imports = [ 
-		./base/settings.nix
-		./base/virtualization.nix
-		./base/packages.nix
-		./custom/packages.nix
-	];
+
+  imports = [
+      ./base/modules.nix
+    ] 
+	++ lib.optional (builtins.pathExists ./custom/modules.nix) ./custom/modules.nix;
+    #++ lib.optional (builtins.pathExists ./work/modules.nix) ./work/modules.nix;
 }
