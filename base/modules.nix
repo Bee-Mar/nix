@@ -1,7 +1,7 @@
 {
-	imports = [ 
-		./config/settings.nix
-		./config/packages.nix	
-		./config/virtualization.nix	
-	];
+  imports = [
+    ./config/settings.nix
+    ./config/packages.nix
+    ./config/virtualization.nix
+  ];
 }

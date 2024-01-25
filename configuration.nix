@@ -6,9 +6,10 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-      	/etc/nixos/hardware-configuration.nix
-	./modules.nix
+    [
+      # Include the results of the hardware scan.
+      /etc/nixos/hardware-configuration.nix
+      ./modules.nix
     ];
 
   # Bootloader.
@@ -93,7 +94,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-	vim
+    vim
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

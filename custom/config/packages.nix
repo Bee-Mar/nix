@@ -1,77 +1,80 @@
 { pkgs, config, ... }:
 
 let
-	nvimPkgs = with pkgs; [
-		neovim
+  nvimPkgs = with pkgs; [
+    neovim
 
-		vimPlugins.vim-plug
+    vimPlugins.vim-plug
 
-		clang_17
-		clang-tools_17
+    clang_17
+    clang-tools_17
 
-		gcc13
+    bun
+    nodejs_20
 
-		bun
-		nodejs_20
+    nodePackages_latest.bash-language-server
 
-		python311Packages.build
-		python311Packages.wheel
-		python311Packages.setuptools
-		python311Packages.setuptools-scm
-		python311Packages.launchpadlib
-		python311Packages.grip
-		python311Packages.pyperclip
-		python311Packages.pynvim
-		python311Packages.python-lsp-server
-		python311Packages.black
-		python311Packages.argcomplete
+    python311Packages.build
+    python311Packages.wheel
+    python311Packages.setuptools
+    python311Packages.setuptools-scm
+    python311Packages.launchpadlib
+    python311Packages.grip
+    python311Packages.pyperclip
+    python311Packages.pynvim
+    python311Packages.python-lsp-server
+    python311Packages.black
+    python311Packages.argcomplete
 
-		ruby_3_3
-		rubyPackages_3_3.solargraph
-		rubyPackages_3_3.yard
+    ruby_3_3
+    rubyPackages_3_3.solargraph
+    rubyPackages_3_3.yard
 
-		shfmt
+    shfmt
 
-		texliveFull
+    texliveFull
 
-		nerdfonts
-	];
+    nerdfonts
+  ];
 
-	generalPkgs = with pkgs; [
-		python311
-		python311Packages.pip
-		python311Packages.pipx
+  generalPkgs = with pkgs; [
+    python311
+    python311Packages.pip
+    python311Packages.pipx
 
-		htop
-		xsel
+    htop
+    xsel
 
-		yq
-		jq
-		rename
+    yq
+    jq
+    rename
 
-		killall
+    killall
 
-		cmake
-		gnumake
-		coreutils
+    cmake
+    gnumake
+    coreutils
     keychain
 
-		tree
-		silver-searcher
-		fzf
-		bat
-		difftastic
+    tree
+    silver-searcher
+    fzf
+    bat
+    difftastic
 
-		devbox
-	];
+    devbox
 
-	workPkgs = with pkgs; [
-		awscli
-	];
+    nixpkgs-fmt
+  ];
 
-in {
-	users.users.bmarlowe = {
-		packages = generalPkgs ++ nvimPkgs;
-	};
+  workPkgs = with pkgs; [
+    awscli
+  ];
+
+in
+{
+  users.users.bmarlowe = {
+    packages = generalPkgs ++ nvimPkgs;
+  };
 }
 

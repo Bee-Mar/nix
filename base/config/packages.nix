@@ -1,12 +1,11 @@
-{ pkgs, config, ... }@args:
+{ pkgs, config, ... }:
 
 {
-	environment.systemPackages = with pkgs; [ 
-		#config.boot.kernelPackages.virtualboxGuestAdditions
-		vim
-		wget
-		curl
-		firefox
-		git
-	];
+  environment.systemPackages = with pkgs; [
+    vim
+    wget
+    curl
+    firefox
+    git
+  ];
 }

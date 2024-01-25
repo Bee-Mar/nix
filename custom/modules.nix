@@ -1,7 +1,6 @@
 {
-
-  	imports = [
-		./config/packages.nix
-	];
+  imports = [
+    ./config/packages.nix
+  ];
 }
 

@@ -1,23 +1,26 @@
-{ pkgs, ... }@args:
+{ pkgs, ... }:
 
 {
-	#environment.systemPackages = with pkgs; [
-		#config.boot.kernelPackages.virtualboxGuestAdditions
-	#];
-	
-	users.users.bmarlowe = {
-		extraGroups = [ "docker" ];
-	};
-	
-	virtualisation = {
-		# for virtualbox
-		#virtualbox.guest.enable = true;
-		#virtualbox.guest.x11 = true;
+  environment.systemPackages = with pkgs; [
+    #config.boot.kernelPackages.virtualboxGuestAdditions
+    open-vm-tools
+  ];
 
-		# for vmware
-		vmware.guest.enable = true;
-		docker.enable = true;
-		podman.enable = true;
-	}; 
+  users.users.bmarlowe = {
+    extraGroups = [ "docker" ];
+  };
+
+  services.xserver.videoDrivers = [ "vmware" ];
+
+  virtualisation = {
+    # for virtualbox
+    #virtualbox.guest.enable = true;
+    #virtualbox.guest.x11 = true;
+
+    # for vmware
+    vmware.guest.enable = true;
+    docker.enable = true;
+    podman.enable = true;
+  };
 }
 
