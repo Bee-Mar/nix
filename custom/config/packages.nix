@@ -10,7 +10,7 @@ let
 		clang-tools_17
 
 		gcc13
-		
+
 		bun
 		nodejs_20
 
@@ -24,7 +24,8 @@ let
 		python311Packages.pynvim
 		python311Packages.python-lsp-server
 		python311Packages.black
-		
+		python311Packages.argcomplete
+
 		ruby_3_3
 		rubyPackages_3_3.solargraph
 		rubyPackages_3_3.yard
@@ -32,7 +33,7 @@ let
 		shfmt
 
 		texliveFull
-		
+
 		nerdfonts
 	];
 
@@ -47,19 +48,20 @@ let
 		yq
 		jq
 		rename
-		
+
 		killall
 
 		cmake
 		gnumake
 		coreutils
+    keychain
 
 		tree
 		silver-searcher
 		fzf
 		bat
 		difftastic
-		
+
 		devbox
 	];
 
