@@ -6,9 +6,6 @@ let
 
     vimPlugins.vim-plug
 
-    clang_17
-    clang-tools_17
-
     bun
     nodejs_20
 
@@ -42,6 +39,9 @@ let
     python311Packages.pip
     python311Packages.pipx
 
+    clang_17
+    clang-tools_17
+
     htop
     xsel
 
@@ -65,6 +65,8 @@ let
     devbox
 
     nixpkgs-fmt
+
+    brave
   ];
 
   workPkgs = with pkgs; [
