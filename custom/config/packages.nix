@@ -17,7 +17,6 @@ let
     python311Packages.setuptools-scm
     python311Packages.launchpadlib
     python311Packages.grip
-    python311Packages.pyperclip
     python311Packages.pynvim
     python311Packages.python-lsp-server
     python311Packages.black
@@ -68,11 +67,6 @@ let
 
     brave
   ];
-
-  workPkgs = with pkgs; [
-    awscli
-  ];
-
 in
 {
   users.users.bmarlowe = {
