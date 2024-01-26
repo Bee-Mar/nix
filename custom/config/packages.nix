@@ -66,6 +66,9 @@ let
     nixpkgs-fmt
 
     brave
+
+    zip
+    unzip
   ];
 in
 {
