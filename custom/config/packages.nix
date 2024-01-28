@@ -66,6 +66,7 @@ let
     nixpkgs-fmt
 
     brave
+    spotify
 
     zip
     unzip
