@@ -70,6 +70,7 @@ let
     zip
     unzip
 
+    kitty
     blackbox-terminal
     calc
   ];
