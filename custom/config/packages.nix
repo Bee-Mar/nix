@@ -71,6 +71,7 @@ let
     unzip
 
     blackbox-terminal
+    calc
   ];
 in
 {
