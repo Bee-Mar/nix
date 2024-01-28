@@ -69,6 +69,8 @@ let
 
     zip
     unzip
+
+    blackbox-terminal
   ];
 in
 {
