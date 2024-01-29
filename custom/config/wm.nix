@@ -3,6 +3,7 @@
 let
   wmPkgs = with pkgs; [
     brightnessctl
+    qtile
   ];
 in
 {
