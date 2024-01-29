@@ -4,6 +4,8 @@ let
   wmPkgs = with pkgs; [
     brightnessctl
     qtile
+    picom
+    rofi
   ];
 in
 {

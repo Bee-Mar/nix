@@ -77,6 +77,8 @@ let
   ];
 in
 {
+  hardware.system76.enableAll = true;
+
   users.users.bmarlowe = {
     packages = generalPkgs ++ nvimPkgs;
   };
