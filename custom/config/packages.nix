@@ -65,7 +65,7 @@ let
 
     nixpkgs-fmt
 
-#brave
+    brave
     spotify
 
     zip
