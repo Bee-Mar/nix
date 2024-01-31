@@ -73,6 +73,9 @@ let
 
     kitty
     calc
+
+    keepassxc
+    kpcli
   ];
 in
 {
