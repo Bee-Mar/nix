@@ -31,6 +31,7 @@ let
     texliveFull
 
     nerdfonts
+    nixd
   ];
 
   generalPkgs = with pkgs; [
