@@ -72,7 +72,6 @@ let
     unzip
 
     kitty
-    blackbox-terminal
     calc
   ];
 in
