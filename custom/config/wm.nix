@@ -3,6 +3,7 @@
 let
   wmPkgs = with pkgs; [
     brightnessctl
+    playerctl
     qtile
     picom
     rofi

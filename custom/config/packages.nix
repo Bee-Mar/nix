@@ -73,10 +73,13 @@ let
     unzip
 
     kitty
+
     calc
 
     keepassxc
     kpcli
+
+    pandoc
   ];
 in
 {
