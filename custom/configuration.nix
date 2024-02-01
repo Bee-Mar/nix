@@ -1,24 +1,7 @@
 { pkgs, ... }:
 
 let
-  #customNeovim = pkgs.stdenv.mkDerivation {
-  #name = "neovim-with-vim-plug";
-  #  buildInputs = [ pkgs.neovim ];
-  #
-  #  unpackPhase = "true"; # No need to unpack anything
-  #
-  #  installPhase = ''
-  #    mkdir -p $out/share/nvim/site/autoload
-  #    curl -fLo $out/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  #  '';
-  #
-  #  preferLocalBuild = true;
-  #  allowSubstitutes = false;
-  #  };
-
   nvimPkgs = with pkgs; [
-    #customNeovim
-
     neovim
 
     vimPlugins.vim-plug
