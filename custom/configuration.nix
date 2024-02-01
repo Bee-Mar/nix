@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
 let
   nvimPkgs = with pkgs; [
@@ -81,12 +81,22 @@ let
 
     pandoc
   ];
+
+  wmPkgs = with pkgs; [
+    brightnessctl
+    playerctl
+    qtile
+    picom
+    rofi
+  ];
+
 in
 {
   hardware.system76.enableAll = true;
+  services.xserver.windowManager.qtile.enable = true;
 
   users.users.bmarlowe = {
-    packages = generalPkgs ++ nvimPkgs;
+    packages = generalPkgs ++ nvimPkgs ++ wmPkgs;
   };
 }
 
