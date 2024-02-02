@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 let
   utilityPkgs = with pkgs; [
     yq
@@ -29,11 +29,12 @@ let
   ];
 
   toolchainPkgs = with pkgs; [
+    devbox
+
     bun
     nodejs_20
 
     python311
-    python311Packages.pip
     python311Packages.pipx
     python311Packages.grip
     python311Packages.argcomplete
@@ -67,9 +68,14 @@ let
     rofi
   ];
 
+  isSystem76 =
+    let
+      sysVendor = builtins.readFile "/sys/class/dmi/id/sys_vendor";
+    in
+    pkgs.lib.strings.hasPrefix "System76" sysVendor;
 in
 {
-  hardware.system76.enableAll = true;
+  hardware.system76.enableAll = isSystem76;
   services.xserver.windowManager.qtile.enable = true;
 
   nix.settings.experimental-features = "nix-command flakes";
