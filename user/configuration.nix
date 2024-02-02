@@ -76,7 +76,11 @@ in
 
   users.users.bmarlowe = {
     extraGroups = [ "docker" ];
-    packages = utilityPkgs ++ neovimPkgs ++ windowManagerPkgs ++ toolchainPkgs;
+
+    packages = utilityPkgs
+      ++ neovimPkgs
+      ++ windowManagerPkgs
+      ++ toolchainPkgs;
   };
 }
 
