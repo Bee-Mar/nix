@@ -4,8 +4,6 @@ let
     yq
     jq
 
-    keychain
-
     tree
     silver-searcher
     fzf
