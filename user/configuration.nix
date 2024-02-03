@@ -25,6 +25,7 @@ let
     kpcli
 
     pandoc
+    marp-cli
     texliveFull
   ];
 
