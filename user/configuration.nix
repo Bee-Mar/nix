@@ -40,6 +40,9 @@ let
     python311Packages.grip
     python311Packages.argcomplete
 
+    cmake
+    cmake-format
+    gnumake
     clang_17
     clang-tools_17
   ];
