@@ -29,6 +29,7 @@ let
 
   toolchainPkgs = with pkgs; [
     devbox
+    direnv
 
     bun
     nodejs_20
