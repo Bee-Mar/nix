@@ -7,16 +7,24 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    git
+
+    zip
+    unzip
+
     wget
     curl
     firefox
-    git
-    zip
-    unzip
+
     calc
+
     tree
     rename
+
     killall
     htop
+
+    devbox
+    direnv
   ];
 }

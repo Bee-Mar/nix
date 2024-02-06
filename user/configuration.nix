@@ -28,8 +28,7 @@ let
   ];
 
   toolchainPkgs = with pkgs; [
-    devbox
-    direnv
+    vscode
 
     bun
     nodejs_20
