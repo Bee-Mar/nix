@@ -71,14 +71,14 @@ let
     rofi
   ];
 
-  isSystem76 =
-    let
-      sysVendor = builtins.readFile "/sys/class/dmi/id/sys_vendor";
-    in
-    pkgs.lib.strings.hasPrefix "System76" sysVendor;
+  #isSystem76 =
+  #    let
+  #      sysVendor = builtins.readFile "/sys/class/dmi/id/sys_vendor";
+  #    in
+  #    pkgs.lib.strings.hasPrefix "System76" sysVendor;
 in
 {
-  hardware.system76.enableAll = isSystem76;
+  hardware.system76.enableAll = true;
   services.xserver.windowManager.qtile.enable = true;
 
   nix.settings.experimental-features = "nix-command flakes";
