@@ -2,16 +2,14 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   imports =
     [
-      ./hardware-configuration.nix
       ./system/configuration.nix
       ./user/configuration.nix
-    ]
-    ++ lib.optional (builtins.pathExists ./work/configuration.nix) ./work/configuration.nix;
+    ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

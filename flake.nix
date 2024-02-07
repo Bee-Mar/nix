@@ -7,21 +7,25 @@
     home-manager.url = "github:nix-community/home-manager/release-23.11";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware, home-manager }: {
+  outputs = { self, nixpkgs }: {
 
     nixosConfigurations = {
       system76 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
-          nixos-hardware.nixosModules.system76
+          ./hardware/hardware-configuration.system76.nix
           ./configuration.nix
+        ];
+      };
 
-          #home-manager.nixosModules.home-manager
-          # {
-          #            home-manager.useUserPackages = true;
-          #            # home-manager.users.bmarlowe =
-          #          }
+      work = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+
+        modules = [
+          ./hardware/hardware-configuration.work.nix
+          ./configuration.nix
+          ./work/configuration.nix
         ];
       };
     };
