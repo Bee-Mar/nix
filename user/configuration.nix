@@ -80,7 +80,7 @@ in
   hardware.system76.enableAll = isSystem76;
   services.xserver.windowManager.qtile.enable = true;
 
-  nix.settings.experimental-features = "nix-command flakes";
+  nix.settings.experimental-features = "nix-command";
 
   users.users.bmarlowe = {
     extraGroups = [ "docker" ];
