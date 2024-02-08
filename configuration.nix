@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "system76"; # Define your hostname.
+  networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
 
   # Set your time zone.

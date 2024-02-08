@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
     #nixos-hardware.url = "github:NixOS/nixos-hardware";
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    #home-manager.url = "github:nix-community/home-manager/release-23.11";
   };
 
   outputs = { self, nixpkgs }: {
@@ -19,11 +19,11 @@
         ];
       };
 
-      work = nixpkgs.lib.nixosSystem {
+      vmware = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
-          ./hardware/hardware-configuration.work.nix
+          ./hardware/hardware-configuration.vmware.nix
           ./configuration.nix
           ./work/configuration.nix
         ];
