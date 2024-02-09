@@ -28,6 +28,7 @@
         ];
       };
     };
+
     defaultPackage = self.system76;
   };
 }
