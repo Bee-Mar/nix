@@ -72,7 +72,7 @@ in
 {
   services.xserver.windowManager.qtile.enable = true;
 
-  nix.settings.experimental-features = "nix-command";
+  nix.settings.experimental-features = "nix-command flakes";
 
   users.users.bmarlowe = {
     isNormalUser = true;
