@@ -1,3 +1,4 @@
+# work/configuration.nix
 { pkgs, ... }:
 
 let

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
 cd ~/.config/nix
+
 system=$(cat /sys/class/dmi/id/sys_vendor | awk '{print tolower($0)}' | tr -d '[:punct:]' | awk '{print $1}')
+
 sudo nixos-rebuild switch -I nixos-config=$HOME/.config/nix/configuration.nix --flake .#${system} "$@"
