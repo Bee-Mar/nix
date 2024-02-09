@@ -1,5 +1,4 @@
-# user/configuration.nix
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 let
   utilityPkgs = with pkgs; [
     yq

@@ -1,5 +1,4 @@
-# work/configuration.nix
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
   workPkgs = with pkgs; [
