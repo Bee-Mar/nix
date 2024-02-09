@@ -1,5 +1,5 @@
 # work/configuration.nix
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let
   workPkgs = with pkgs; [
@@ -11,7 +11,7 @@ let
 
 in
 {
-  users.users.bmarlowe = {
+  users.users.${config.username} = {
     packages = workPkgs;
   };
 
