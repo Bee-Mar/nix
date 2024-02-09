@@ -11,7 +11,7 @@ let
 
 in
 {
-  users.users.${config.username} = {
+  users.users.bmarlowe = {
     packages = workPkgs;
   };
 

@@ -4,6 +4,10 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
+
   imports = [ ];
 
   boot.initrd.availableKernelModules = [ "ata_piix" "mptspi" "uhci_hcd" "ehci_pci" "sd_mod" "sr_mod" ];
@@ -12,7 +16,8 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/1456db21-863a-415e-9980-3953a39c81f1";
+    {
+      device = "/dev/disk/by-uuid/1456db21-863a-415e-9980-3953a39c81f1";
       fsType = "ext4";
     };
 
