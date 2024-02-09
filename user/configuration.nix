@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+# user/configuration.nix
+{ pkgs, config, ... }:
 let
   utilityPkgs = with pkgs; [
     yq
     jq
 
-    tree
     silver-searcher
     fzf
     bat
@@ -25,11 +25,11 @@ let
     pandoc
     marp-cli
     texliveFull
+
+    home-manager
   ];
 
   toolchainPkgs = with pkgs; [
-    vscode
-
     bun
     nodejs_20
 
@@ -69,21 +69,16 @@ let
     picom
     rofi
   ];
-
-  isSystem76 =
-    let
-      sysVendor = builtins.readFile "/sys/class/dmi/id/sys_vendor";
-    in
-    pkgs.lib.strings.hasPrefix "System76" sysVendor;
 in
 {
-  hardware.system76.enableAll = isSystem76;
   services.xserver.windowManager.qtile.enable = true;
 
   nix.settings.experimental-features = "nix-command";
 
   users.users.bmarlowe = {
-    extraGroups = [ "docker" ];
+    isNormalUser = true;
+    description = "Brandon Marlowe";
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
 
     packages = utilityPkgs
       ++ neovimPkgs
