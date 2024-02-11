@@ -47,8 +47,10 @@
     podman.enable = true;
   };
 
-  nixpkgs.config.allowUnfree = true;
   services.openssh.enable = true;
+  nixpkgs.config.allowUnfree = true;
+
+  nix.settings.experimental-features = "nix-command flakes";
 
   environment.systemPackages = with pkgs; [
     vim
@@ -73,6 +75,7 @@
     htop
     devbox
     direnv
+    home-manager
   ];
 
   # This value determines the NixOS release from which the default

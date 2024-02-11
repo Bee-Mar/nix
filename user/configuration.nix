@@ -25,8 +25,6 @@ let
     pandoc
     marp-cli
     texliveFull
-
-    home-manager
   ];
 
   toolchainPkgs = with pkgs; [
