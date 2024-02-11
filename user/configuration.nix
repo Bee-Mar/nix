@@ -34,8 +34,6 @@ let
 
     python311
     python311Packages.pipx
-    python311Packages.grip
-    python311Packages.argcomplete
 
     cmake
     cmake-format
