@@ -6,6 +6,7 @@ let
 
     silver-searcher
     fzf
+    fd
     bat
     difftastic
 
