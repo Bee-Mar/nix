@@ -4,13 +4,11 @@ let
     yq
     jq
 
-    silver-searcher
     fzf
     fd
     bat
     difftastic
-
-    nixpkgs-fmt
+    silver-searcher
 
     brave
     spotify
@@ -43,18 +41,19 @@ let
 
   neovimPkgs = with pkgs; [
     neovim
-
     vimPlugins.vim-plug
 
     nodePackages_latest.bash-language-server
 
-    python311Packages.pynvim
     python311Packages.python-lsp-server
+    python311Packages.pynvim
     python311Packages.black
+
+    nerdfonts
 
     shfmt
 
-    nerdfonts
+    nixpkgs-fmt
     nil
   ];
 
