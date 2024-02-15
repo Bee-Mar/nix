@@ -41,7 +41,6 @@ let
 
   neovimPkgs = with pkgs; [
     neovim
-    vimPlugins.vim-plug
 
     nodePackages_latest.bash-language-server
 
