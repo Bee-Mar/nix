@@ -23,6 +23,7 @@ let
     pandoc
     marp-cli
     texliveFull
+    evince
   ];
 
   toolchainPkgs = with pkgs; [
