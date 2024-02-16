@@ -24,6 +24,7 @@ let
     marp-cli
     texliveFull
     evince
+    scrot
   ];
 
   toolchainPkgs = with pkgs; [
