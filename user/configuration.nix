@@ -9,6 +9,7 @@ let
     bat
     difftastic
     silver-searcher
+    stow
 
     brave
     spotify
@@ -19,12 +20,12 @@ let
     xsel
     keepassxc
     kpcli
+    scrot
 
     pandoc
     marp-cli
     texliveFull
     evince
-    scrot
   ];
 
   toolchainPkgs = with pkgs; [
