@@ -54,6 +54,7 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    git
     stdenv.cc.cc
 
     zip
@@ -61,22 +62,21 @@
 
     wget
     curl
+
     firefox
     evince
-    git
-    calc
 
+    file
     tree
     rename
 
+    calc
+
     killall
     htop
-    file
+
     devbox
     direnv
-
-
-    home-manager
   ];
 
   # This value determines the NixOS release from which the default
