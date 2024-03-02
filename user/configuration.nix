@@ -22,9 +22,6 @@ let
     kpcli
     scrot
 
-    evince
-
-    file
     patchelf
 
     nix-index
