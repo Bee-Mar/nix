@@ -22,9 +22,6 @@ let
     kpcli
     scrot
 
-    pandoc
-    marp-cli
-    texliveFull
     evince
 
     file
