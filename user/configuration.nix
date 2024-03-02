@@ -26,6 +26,11 @@ let
     marp-cli
     texliveFull
     evince
+
+    file
+    patchelf
+
+    nix-index
   ];
 
   toolchainPkgs = with pkgs; [
@@ -38,6 +43,7 @@ let
     cmake
     cmake-format
     gnumake
+    stdenv.cc.cc
     clang_17
     clang-tools_17
   ];
@@ -72,12 +78,19 @@ in
 
   nix.settings.experimental-features = "nix-command flakes";
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+  ];
+
   users.users.bmarlowe = {
     isNormalUser = true;
     description = "Brandon Marlowe";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
 
-    packages = utilityPkgs
+    packages =
+      utilityPkgs
       ++ neovimPkgs
       ++ windowManagerPkgs
       ++ toolchainPkgs;
