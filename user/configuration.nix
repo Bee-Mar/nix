@@ -40,7 +40,6 @@ let
     cmake
     cmake-format
     gnumake
-    stdenv.cc.cc
     clang_17
     clang-tools_17
   ];

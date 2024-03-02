@@ -75,6 +75,7 @@
     htop
     devbox
     direnv
+    stdenv.cc.cc
   ];
 
   # This value determines the NixOS release from which the default
