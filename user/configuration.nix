@@ -37,6 +37,7 @@ let
     cmake
     cmake-format
     gnumake
+
     clang_17
     clang-tools_17
   ];
@@ -70,12 +71,6 @@ in
   services.xserver.windowManager.qtile.enable = true;
 
   nix.settings.experimental-features = "nix-command flakes";
-
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc
-    zlib
-  ];
 
   users.users.bmarlowe = {
     isNormalUser = true;
