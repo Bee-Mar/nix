@@ -11,6 +11,12 @@ let
 
 in
 {
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+  ];
+
   users.users.bmarlowe = {
     packages = workPkgs;
   };
