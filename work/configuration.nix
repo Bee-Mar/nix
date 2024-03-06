@@ -11,8 +11,6 @@ let
 
 in
 {
-  programs.nix-ld.enable = true;
-
   users.users.bmarlowe = {
     packages = workPkgs;
   };
