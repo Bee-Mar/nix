@@ -25,6 +25,7 @@ let
     patchelf
 
     nix-index
+    manix
   ];
 
   toolchainPkgs = with pkgs; [
