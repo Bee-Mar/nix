@@ -52,32 +52,35 @@
 
   nix.settings.experimental-features = "nix-command flakes";
 
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-    stdenv.cc.cc
+  environment.variables.PATH = "$PATH:$HOME/.config/nix/bin:$HOME/.local/bin";
 
-    zip
-    unzip
+  environment.systemPackages = with pkgs;
+    [
+      vim
+      git
+      stdenv.cc.cc
 
-    wget
-    curl
+      zip
+      unzip
 
-    firefox
-    evince
+      wget
+      curl
 
-    file
-    tree
-    rename
+      firefox
+      evince
 
-    calc
+      file
+      tree
+      rename
 
-    killall
-    htop
+      calc
 
-    devbox
-    direnv
-  ];
+      killall
+      htop
+
+      devbox
+      direnv
+    ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
