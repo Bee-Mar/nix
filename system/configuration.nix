@@ -52,7 +52,7 @@
 
   nix.settings.experimental-features = "nix-command flakes";
 
-  environment.variables.PATH = "$PATH:$HOME/.config/nix/bin:$HOME/.local/bin";
+  environment.variables.PATH = "$PATH:$HOME/.config/nix/bin";
 
   environment.systemPackages = with pkgs;
     [

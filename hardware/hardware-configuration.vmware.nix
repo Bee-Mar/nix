@@ -31,4 +31,13 @@
   # networking.interfaces.ens33.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
+  # VMware specific things
+  environment.systemPackages = with pkgs; [
+    open-vm-tools
+  ];
+
+  services.xserver.videoDrivers = [ "vmware" ];
+
+  virtualisation.vmware.guest.enable = true;
 }

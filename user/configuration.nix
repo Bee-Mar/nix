@@ -41,6 +41,8 @@ let
 
     clang_17
     clang-tools_17
+
+    jdk21
   ];
 
   neovimPkgs = with pkgs; [
