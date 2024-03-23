@@ -32,7 +32,7 @@ let
     bun
     nodejs_20
 
-    python311
+    python311Full
     python311Packages.pipx
 
     cmake
@@ -50,7 +50,6 @@ let
 
     nodePackages_latest.bash-language-server
 
-    python311Packages.python-lsp-server
     python311Packages.pynvim
     python311Packages.black
 
