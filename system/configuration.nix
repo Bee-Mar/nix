@@ -19,14 +19,15 @@
   };
 
   # Enable the X11 windowing system and cinnamon
-  services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
-
   services.xserver = {
     layout = "us";
     xkbVariant = "";
+    enable = true;
+    displayManager.lightdm.enable = true;
+    desktopManager.cinnamon.enable = true;
   };
+
+  services.openssh.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -35,6 +36,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -47,13 +49,10 @@
     podman.enable = true;
   };
 
-  services.openssh.enable = true;
   nixpkgs.config.allowUnfree = true;
-
   nix.settings.experimental-features = "nix-command flakes";
 
   environment.variables.PATH = "$PATH:$HOME/.config/nix/bin";
-
   environment.systemPackages = with pkgs;
     [
       vim
