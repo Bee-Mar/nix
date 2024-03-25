@@ -70,12 +70,13 @@ in
           i3status
           i3blocks
           feh
-          brightnessctl
           playerctl
           picom
           rofi
           numlockx
           blueman
+          brightnessctl
+          acpi
         ];
       };
     };
