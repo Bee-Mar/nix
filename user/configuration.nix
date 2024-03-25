@@ -63,7 +63,7 @@ let
 in
 {
   services.xserver = {
-    desktopManager.xterm.enable = false;
+    # desktopManager.xterm.enable = false;
 
     windowManager = {
       i3 = {
