@@ -50,7 +50,6 @@ let
 
     nodePackages_latest.bash-language-server
 
-    python311Packages.python-lsp-server
     python311Packages.pynvim
     python311Packages.black
 
@@ -61,17 +60,26 @@ let
     nixpkgs-fmt
     nil
   ];
-
-  windowManagerPkgs = with pkgs; [
-    python311Packages.qtile
-    brightnessctl
-    playerctl
-    picom
-    rofi
-  ];
 in
 {
-  services.xserver.windowManager.qtile.enable = true;
+  services.xserver = {
+    desktopManager.xterm.enable = false;
+
+    windowManager = {
+      i3 = {
+        enable = true;
+        extraPackages = with pkgs; [
+          i3status
+          i3blocks
+          feh
+          brightnessctl
+          playerctl
+          picom
+          rofi
+        ];
+      };
+    };
+  };
 
   programs.nix-ld.enable = true;
 
@@ -85,7 +93,6 @@ in
     packages =
       utilityPkgs
       ++ neovimPkgs
-      ++ windowManagerPkgs
       ++ toolchainPkgs;
   };
 }
