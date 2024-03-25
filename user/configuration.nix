@@ -32,7 +32,7 @@ let
     bun
     nodejs_20
 
-    python311
+    python311Full
     python311Packages.pipx
 
     cmake
