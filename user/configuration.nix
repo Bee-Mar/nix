@@ -76,6 +76,8 @@ in
           playerctl
           picom
           rofi
+          numlockx
+          blueman
         ];
       };
     };
