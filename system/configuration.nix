@@ -79,6 +79,8 @@
 
       devbox
       direnv
+
+      libreoffice
     ];
 
   # This value determines the NixOS release from which the default
