@@ -82,7 +82,10 @@ in
     };
   };
 
-  programs.nix-ld.enable = true;
+  programs = {
+    nix-ld.enable = true;
+    direnv.nix-direnv.enable = true;
+  };
 
   nix.settings.experimental-features = "nix-command flakes";
 
