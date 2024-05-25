@@ -14,9 +14,6 @@ let
     brave
     spotify
 
-    kitty
-    kitty-themes
-
     xsel
     keepassxc
     kpcli
