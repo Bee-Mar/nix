@@ -20,8 +20,8 @@
 
   # Enable the X11 windowing system and cinnamon
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
     enable = true;
     displayManager.lightdm.enable = true;
     desktopManager.cinnamon.enable = true;
