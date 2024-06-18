@@ -31,6 +31,7 @@ let
 
     python311Full
     python311Packages.pipx
+    uv
 
     cmake
     cmake-format
