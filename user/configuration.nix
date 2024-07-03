@@ -31,8 +31,6 @@ let
 
     python311Full
     python311Packages.pipx
-    uv
-    ruff
 
     cmake
     cmake-format
