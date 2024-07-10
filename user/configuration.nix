@@ -25,6 +25,13 @@ let
     manix
   ];
 
+  emacsPkgs = with pkgs; [
+    emacs
+    libvterm
+    libtool
+    python311Packages.python-lsp-server
+  ];
+
   toolchainPkgs = with pkgs; [
     bun
     nodejs_20
@@ -94,7 +101,8 @@ in
     packages =
       utilityPkgs
       ++ neovimPkgs
-      ++ toolchainPkgs;
+      ++ toolchainPkgs
+      ++ emacsPkgs;
   };
 }
 
