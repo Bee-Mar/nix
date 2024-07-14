@@ -44,8 +44,9 @@ let
 
   editorPkgs = with pkgs; [
     neovim
-    jetbrains.clion
-    jetbrains.goland
+    vscode
+    #jetbrains.clion
+    #jetbrains.goland
   ];
 
   neovimPkgs = with pkgs; [
