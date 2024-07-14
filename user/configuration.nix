@@ -42,9 +42,13 @@ let
     jdk21
   ];
 
-  neovimPkgs = with pkgs; [
+  editorPkgs = with pkgs; [
     neovim
+    jetbrains.clion
+    jetbrains.goland
+  ];
 
+  neovimPkgs = with pkgs; [
     nodePackages_latest.bash-language-server
 
     python311Packages.pynvim
@@ -94,6 +98,7 @@ in
     packages =
       utilityPkgs
       ++ neovimPkgs
+      ++ editorPkgs
       ++ toolchainPkgs;
   };
 }
