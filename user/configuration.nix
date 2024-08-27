@@ -23,6 +23,9 @@ let
 
     nix-index
     manix
+
+    ida-free
+    ghidra
   ];
 
   toolchainPkgs = with pkgs; [
@@ -45,7 +48,7 @@ let
   editorPkgs = with pkgs; [
     neovim
     vscode
-    #jetbrains.clion
+    jetbrains.clion
     #jetbrains.goland
   ];
 
@@ -87,6 +90,7 @@ in
   programs = {
     nix-ld.enable = true;
     direnv.nix-direnv.enable = true;
+    steam.enable = true;
   };
 
   nix.settings.experimental-features = "nix-command flakes";
