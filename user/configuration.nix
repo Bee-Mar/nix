@@ -21,6 +21,8 @@ let
 
     patchelf
 
+    pinta
+
     nix-index
     manix
 
