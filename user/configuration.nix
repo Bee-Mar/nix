@@ -28,6 +28,8 @@ let
 
     ida-free
     ghidra
+
+    evince
   ];
 
   toolchainPkgs = with pkgs; [
