@@ -45,6 +45,7 @@ let
 
     clang_17
     clang-tools_17
+    cling
 
     jdk21
   ];
