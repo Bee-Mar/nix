@@ -30,6 +30,9 @@ let
     ghidra
 
     evince
+    okular
+
+    gimp
   ];
 
   toolchainPkgs = with pkgs; [
