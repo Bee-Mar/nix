@@ -57,7 +57,7 @@ let
     neovim
     vscode
     jetbrains.clion
-    #jetbrains.goland
+    jetbrains.goland
   ];
 
   neovimPkgs = with pkgs; [
