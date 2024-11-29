@@ -12,6 +12,7 @@ let
     stow
 
     brave
+    google-chrome
     spotify
 
     xsel
@@ -39,8 +40,8 @@ let
     bun
     nodejs_20
 
-    python311Full
-    python311Packages.pipx
+    python312Full
+    python312Packages.pipx
 
     cmake
     cmake-format
@@ -63,8 +64,8 @@ let
   neovimPkgs = with pkgs; [
     nodePackages_latest.bash-language-server
 
-    python311Packages.pynvim
-    python311Packages.black
+    python312Packages.pynvim
+    python312Packages.black
 
     nerdfonts
 
@@ -98,7 +99,7 @@ in
   programs = {
     nix-ld.enable = true;
     direnv.nix-direnv.enable = true;
-    steam.enable = true;
+    #steam.enable = true;
   };
 
   nix.settings.experimental-features = "nix-command flakes";
