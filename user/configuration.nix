@@ -34,6 +34,8 @@ let
     okular
 
     gimp
+
+    openvpn
   ];
 
   toolchainPkgs = with pkgs; [
