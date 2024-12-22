@@ -29,6 +29,7 @@ let
 
     ida-free
     ghidra
+    burpsuite
 
     evince
     okular
