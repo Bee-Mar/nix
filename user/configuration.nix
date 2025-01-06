@@ -76,6 +76,8 @@ let
 
     nixpkgs-fmt
     nil
+
+    #usbimager # just for future ref
   ];
 in
 {
