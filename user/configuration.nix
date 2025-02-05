@@ -12,7 +12,6 @@ let
     stow
 
     brave
-    google-chrome
     spotify
 
     xsel
@@ -26,6 +25,9 @@ let
 
     nix-index
     manix
+
+    kitty
+    ranger
 
     ida-free
     ghidra
@@ -43,8 +45,13 @@ let
     bun
     nodejs_20
 
-    python312Full
-    python312Packages.pipx
+    (python313.withPackages (pythonPkgs: with pythonPkgs; [
+      pipx
+      pynvim
+      ruff
+    ]))
+
+    ruff-lsp
 
     cmake
     cmake-format
@@ -77,7 +84,7 @@ let
     nixpkgs-fmt
     nil
 
-    #usbimager # just for future ref
+    usbimager # just for future ref
   ];
 in
 {
