@@ -71,6 +71,8 @@
       tree
       rename
 
+      alsa-utils
+
       calc
 
       killall
