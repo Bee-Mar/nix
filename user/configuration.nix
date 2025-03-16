@@ -29,16 +29,30 @@ let
     kitty
     ranger
 
-    ida-free
-    ghidra
-    burpsuite
-
     evince
     okular
 
     gimp
 
     openvpn
+
+    obsidian
+
+    libtool
+    libvterm
+    emacs
+  ];
+
+  rePkgs = with pkgs; [
+    gef
+    ida-free
+    ghidra
+    burpsuite
+
+    (cutter.withPlugins (ps: with ps; [
+      rz-ghidra
+    ]))
+
   ];
 
   toolchainPkgs = with pkgs; [
@@ -116,6 +130,10 @@ in
 
   nix.settings.experimental-features = "nix-command flakes";
 
+  virtualisation = {
+    vmware.host.enable = true;
+  };
+
   users.users.bmarlowe = {
     isNormalUser = true;
     description = "Brandon Marlowe";
@@ -125,6 +143,7 @@ in
       utilityPkgs
       ++ neovimPkgs
       ++ editorPkgs
+      ++ rePkgs
       ++ toolchainPkgs;
   };
 }
