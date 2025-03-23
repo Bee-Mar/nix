@@ -44,20 +44,21 @@ let
   ];
 
   rePkgs = with pkgs; [
+    gf
     gef
-    ida-free
+
     ghidra
+    ida-free
     burpsuite
 
     (cutter.withPlugins (ps: with ps; [
       rz-ghidra
     ]))
-
   ];
 
   toolchainPkgs = with pkgs; [
     bun
-    nodejs_20
+    nodejs_22
 
     (python313.withPackages (pythonPkgs: with pythonPkgs; [
       pipx
@@ -71,11 +72,11 @@ let
     cmake-format
     gnumake
 
-    clang_17
-    clang-tools_17
+    clang_19
+    clang-tools_19
     cling
 
-    jdk21
+    jdk23
   ];
 
   editorPkgs = with pkgs; [
@@ -88,8 +89,7 @@ let
   neovimPkgs = with pkgs; [
     nodePackages_latest.bash-language-server
 
-    python312Packages.pynvim
-    python312Packages.black
+    lua-language-server
 
     nerdfonts
 
