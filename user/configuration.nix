@@ -37,10 +37,6 @@ let
     openvpn
 
     obsidian
-
-    libtool
-    libvterm
-    emacs
   ];
 
   rePkgs = with pkgs; [
@@ -81,6 +77,7 @@ let
 
   editorPkgs = with pkgs; [
     neovim
+    tree-sitter
     vscode
     jetbrains.clion
     jetbrains.goland
