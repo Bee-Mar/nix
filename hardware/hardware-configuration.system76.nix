@@ -25,19 +25,16 @@
       fsType = "ext4";
     };
 
-  fileSystems."/vm" = {
-    device = "/dev/disk/by-uuid/e2e65cf8-5f73-4185-bb72-e05f7e32d0d0";
-    fsType = "ext4";
-    options = [
-      "uid=1000,gid=1000"
-    ];
-  };
-
   fileSystems."/boot" =
     {
       device = "/dev/disk/by-uuid/2A76-E719";
       fsType = "vfat";
     };
+
+  fileSystems."/vm" = {
+    device = "/dev/disk/by-uuid/e2e65cf8-5f73-4185-bb72-e05f7e32d0d0";
+    fsType = "ext4";
+  };
 
   swapDevices = [ ];
 
