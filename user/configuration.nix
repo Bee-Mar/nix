@@ -62,8 +62,6 @@ let
       ruff
     ]))
 
-    ruff-lsp
-
     cmake
     cmake-format
     gnumake
