@@ -79,8 +79,9 @@
       killall
       htop
 
-      devbox
+      devenv
       direnv
+      nix-direnv
 
       libreoffice
     ];
