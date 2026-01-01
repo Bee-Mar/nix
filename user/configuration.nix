@@ -21,8 +21,6 @@ let
 
     patchelf
 
-    pinta
-
     nix-index
     manix
 
@@ -30,9 +28,8 @@ let
     ranger
 
     evince
-    okular
 
-    gimp
+    dive
 
     openvpn
 
@@ -44,7 +41,6 @@ let
     gef
 
     ghidra
-    ida-free
     burpsuite
 
     (cutter.withPlugins (ps: with ps; [
@@ -54,7 +50,7 @@ let
 
   toolchainPkgs = with pkgs; [
     bun
-    nodejs_22
+    nodejs_24
 
     (python313.withPackages (pythonPkgs: with pythonPkgs; [
       pipx
@@ -66,17 +62,16 @@ let
     cmake-format
     gnumake
 
-    clang_19
-    clang-tools_19
+    #clang_19
+    #clang-tools_19
     cling
 
-    jdk23
+    jdk25
   ];
 
   editorPkgs = with pkgs; [
     neovim
     tree-sitter
-    vscode
     jetbrains.clion
     jetbrains.goland
   ];
@@ -85,8 +80,6 @@ let
     nodePackages_latest.bash-language-server
 
     lua-language-server
-
-    nerdfonts
 
     shfmt
 
@@ -141,5 +134,9 @@ in
       ++ rePkgs
       ++ toolchainPkgs;
   };
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
 }
 
