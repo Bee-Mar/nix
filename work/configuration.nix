@@ -6,7 +6,6 @@ let
     ssm-session-manager-plugin
 
     jetbrains.clion
-    vscode
   ];
 
 in
