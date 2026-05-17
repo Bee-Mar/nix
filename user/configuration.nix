@@ -13,6 +13,7 @@ let
 
     brave
     spotify
+    remmina
 
     xsel
     keepassxc
@@ -43,28 +44,28 @@ let
     ghidra
     burpsuite
 
-    (cutter.withPlugins (ps: with ps; [
-      rz-ghidra
-    ]))
+    (cutter.withPlugins (
+      ps: with ps; [
+        rz-ghidra
+      ]
+    ))
   ];
 
   toolchainPkgs = with pkgs; [
     bun
     nodejs_24
 
-    (python313.withPackages (pythonPkgs: with pythonPkgs; [
-      pipx
-      pynvim
-      ruff
-    ]))
+    (python313.withPackages (
+      pythonPkgs: with pythonPkgs; [
+        pipx
+        pynvim
+        ruff
+      ]
+    ))
 
     cmake
     cmake-format
     gnumake
-
-    #clang_19
-    #clang-tools_19
-    cling
 
     jdk25
   ];
@@ -72,8 +73,10 @@ let
   editorPkgs = with pkgs; [
     neovim
     tree-sitter
-    jetbrains.clion
-    jetbrains.goland
+    #jetbrains.clion
+    #jetbrains.goland
+
+    windsurf
   ];
 
   neovimPkgs = with pkgs; [
@@ -83,10 +86,10 @@ let
 
     shfmt
 
-    nixpkgs-fmt
+    nixfmt
     nil
 
-    usbimager # just for future ref
+    # usbimager # just for future ref
   ];
 in
 {
@@ -125,13 +128,17 @@ in
   users.users.bmarlowe = {
     isNormalUser = true;
     description = "Brandon Marlowe";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
 
     packages =
       utilityPkgs
       ++ neovimPkgs
       ++ editorPkgs
-      ++ rePkgs
+      # ++ rePkgs
       ++ toolchainPkgs;
   };
 
@@ -139,4 +146,3 @@ in
     nerd-fonts.jetbrains-mono
   ];
 }
-

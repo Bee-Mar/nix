@@ -55,6 +55,8 @@
   environment.variables.PATH = "$PATH:$HOME/.config/nix/bin";
   environment.systemPackages = with pkgs;
     [
+      cacert
+
       vim
       git
       stdenv.cc.cc
