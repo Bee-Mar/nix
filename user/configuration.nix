@@ -119,6 +119,12 @@ in
     #steam.enable = true;
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "monthly";
+    options = "--delete-older-than 30d";
+  };
+
   nix.settings.experimental-features = "nix-command flakes";
 
   virtualisation = {
