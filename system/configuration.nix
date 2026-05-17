@@ -27,6 +27,8 @@
     desktopManager.cinnamon.enable = true;
   };
 
+  boot.loader.systemd-boot.configurationLimit = 10;
+
   services.openssh.enable = true;
 
   # Enable CUPS to print documents.
@@ -53,40 +55,39 @@
   nix.settings.experimental-features = "nix-command flakes";
 
   environment.variables.PATH = "$PATH:$HOME/.config/nix/bin";
-  environment.systemPackages = with pkgs;
-    [
-      cacert
+  environment.systemPackages = with pkgs; [
+    cacert
 
-      vim
-      git
-      stdenv.cc.cc
+    vim
+    git
+    stdenv.cc.cc
 
-      zip
-      unzip
+    zip
+    unzip
 
-      wget
-      curl
+    wget
+    curl
 
-      firefox
-      evince
+    firefox
+    evince
 
-      file
-      tree
-      rename
+    file
+    tree
+    rename
 
-      alsa-utils
+    alsa-utils
 
-      calc
+    calc
 
-      killall
-      htop
+    killall
+    htop
 
-      devenv
-      direnv
-      nix-direnv
+    devenv
+    direnv
+    nix-direnv
 
-      libreoffice
-    ];
+    libreoffice
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
