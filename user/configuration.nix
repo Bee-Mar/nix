@@ -35,6 +35,8 @@ let
     openvpn
 
     obsidian
+
+    claude-code
   ];
 
   rePkgs = with pkgs; [
@@ -55,9 +57,8 @@ let
     bun
     nodejs_24
 
-    (python313.withPackages (
+    (python315.withPackages (
       pythonPkgs: with pythonPkgs; [
-        pipx
         pynvim
         ruff
       ]
@@ -80,8 +81,7 @@ let
   ];
 
   neovimPkgs = with pkgs; [
-    nodePackages_latest.bash-language-server
-
+    bash-language-server
     lua-language-server
 
     shfmt

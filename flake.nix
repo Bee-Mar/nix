@@ -2,10 +2,11 @@
   description = "Flake-Based Nix/NixOS Configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
   };
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     {
       nixosConfigurations = {
         system76 = nixpkgs.lib.nixosSystem {
